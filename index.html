@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Akash Landge | Pharma & Clinical Professional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Akash Landge – B.Pharm graduate with experience in pharmacovigilance, clinical data, documentation, and interest in biostatistics and programming." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #111827;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.15);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2937;
+      --radius-xl: 18px;
+      --shadow-soft: 0 20px 45px rgba(15,23,42,0.75);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 26px;
+    }
+
+    .name-block h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    .name-block p {
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.35);
+      font-size: 0.78rem;
+      color: #cbd5f5;
+      margin-top: 10px;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.22);
+    }
+
+    .contact-block {
+      text-align: right;
+      font-size: 0.9rem;
+    }
+
+    .contact-block div {
+      margin-bottom: 4px;
+    }
+
+    .contact-block a {
+      font-weight: 500;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.35fr);
+      gap: 22px;
+    }
+
+    @media (max-width: 880px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .contact-block {
+        text-align: left;
+      }
+      header {
+        align-items: flex-start;
+      }
+    }
+
+    .card {
+      background: rgba(15,23,42,0.96);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      padding: 18px 18px 16px;
+      box-shadow: 0 18px 36px rgba(0,0,0,0.55);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 56%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: #9ca3ff;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .badge {
+      font-size: 0.8rem;
+      border-radius: 999px;
+      padding: 4px 9px;
+      border: 1px solid rgba(148,163,184,0.45);
+      background-color: rgba(15,23,42,0.75);
+      color: #e5e7eb;
+      white-space: nowrap;
+    }
+
+    .section {
+      margin-top: 14px;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #e5e7ff;
+    }
+
+    .section p,
+    .section li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .section ul {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    .section li {
+      margin-bottom: 3px;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .section li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    .two-column-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .two-column-list span {
+      min-width: 40%;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 5px;
+    }
+
+    .pill-row span {
+      font-size: 0.8rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.4);
+    }
+
+    .experience-item {
+      margin-bottom: 10px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+
+    .experience-role {
+      font-weight: 600;
+      color: #e5e7ff;
+    }
+
+    .experience-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .separator {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #374151, transparent);
+      margin: 14px 0 10px;
+    }
+
+    footer {
+      margin-top: 26px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .footer-links {
+      margin-top: 4px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+    }
+
+    .footer-links a {
+      color: #9ca3ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="name-block">
+        <h1>Akash Landge</h1>
+        <p>B.Pharm graduate with experience in clinical data, documentation and pharmacovigilance, exploring biostatistics and programming for data-driven healthcare.</p>
+        <div class="pill">
+          <span class="pill-dot"></span>
+          <span>Open to roles in PV • CDM • Medical Writing • Biostat / Data</span>
+        </div>
+      </div>
+      <div class="contact-block">
+        <div>Pune, India</div>
+        <div><a href="tel:+917709681848">+91&nbsp;7709681848</a></div>
+        <div><a href="mailto:landgeakash414@gmail.com">landgeakash414@gmail.com</a></div>
+        <div><a href="https://www.linkedin.com/in/akash-landge-3b2ba21b8" target="_blank">linkedin.com/in/akash-landge-3b2ba21b8</a></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <div class="card">
+        <div class="card-inner">
+          <h2>Profile</h2>
+          <p class="tagline">
+            Detail-oriented life sciences graduate with hands-on exposure to
+            <strong>pharmacovigilance, clinical data review, documentation quality, and research writing</strong>,
+            now transitioning into data-driven roles such as <strong>biostatistical programming</strong> and
+            <strong>clinical analytics</strong>.
+          </p>
+
+          <div class="section">
+            <div class="section-title">Highlights</div>
+            <ul>
+              <li>Experience in data accuracy checks, discrepancy review, formatting QC, and audit-ready documentation.</li>
+              <li>Understanding of PV concepts: ICSR lifecycle, AE/SAE basics, MedDRA coding exposure, GVP &amp; ICH awareness.</li>
+              <li>Strong scientific writing, literature review, and research documentation background.</li>
+              <li>Interested in growing into biostatistical programming (SAS/R), clinical data management, and analytics.</li>
+            </ul>
+          </div>
+
+          <div class="separator"></div>
+
+          <div class="section">
+            <div class="section-title">Experience</div>
+
+            <div class="experience-item">
+              <div class="experience-header">
+                <div class="experience-role">Associate – Compliance & Data Management</div>
+                <div class="experience-meta">Jul 2023 – Present · Pune</div>
+              </div>
+              <div class="experience-meta">Suavis India Software Services Pvt. Ltd.</div>
+              <ul>
+                <li>Performed data verification, quality checks, and consistency review across large structured datasets.</li>
+                <li>Reviewed and improved documentation format, metadata, and alignment with project standards.</li>
+                <li>Identified data issues and supported correction workflows to maintain high data integrity.</li>
+                <li>Collaborated with global teams to deliver accurate, timely, and client-ready outputs.</li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <div class="experience-header">
+                <div class="experience-role">Pharmacovigilance &amp; Clinical Research Exposure</div>
+                <div class="experience-meta">Academic &amp; Practical</div>
+              </div>
+              <ul>
+                <li>Understanding of ICSR lifecycle, core case fields, seriousness criteria, and safety data review.</li>
+                <li>Exposure to SAE reconciliation, MedDRA basics, medical terminology, and regulatory documentation concepts.</li>
+                <li>Experience extracting clinical information from literature and translating it into structured summaries.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="separator"></div>
+
+          <div class="section">
+            <div class="section-title">Projects & Research</div>
+            <ul>
+              <li><strong>Research (Under Publication):</strong> Stimuli-responsive nanosponge-based anticancer drug delivery – involved structured data extraction, literature review, and scientific writing.</li>
+              <li><strong>Thesis:</strong> Drug Delivery – Principles &amp; Engineering.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="card">
+        <div class="card-inner">
+          <h2>Skills & Education</h2>
+
+          <div class="section">
+            <div class="section-title">Core Skills</div>
+            <p class="tagline">Blending safety, documentation, and data awareness with an analytical mindset.</p>
+            <div class="pill-row">
+              <span>Clinical Data Review</span>
+              <span>Data Quality Checks</span>
+              <span>ICSR Lifecycle Basics</span>
+              <span>AE / SAE Exposure</span>
+              <span>MedDRA Basics</span>
+              <span>GVP &amp; ICH Awareness</span>
+              <span>Scientific / Medical Writing</span>
+              <span>Literature Review</span>
+              <span>Documentation QC</span>
+              <span>Audit-Ready Records</span>
+              <span>MS Excel, Word, PowerPoint</span>
+              <span>Argus (PV Exposure)</span>
+              <span>PubMed &amp; ClinicalTrials.gov</span>
+              <span>Basic SDLC &amp; UAT</span>
+              <span>Attention to Detail</span>
+              <span>Analytical Thinking</span>
+              <span>Clear Communication</span>
+              <span>Adaptability</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Education</div>
+            <p><strong>Bachelor of Pharmacy (B.Pharm)</strong></p>
+            <p>Savitribai Phule Pune University · 2024</p>
+            <p>CGPA: 7.29</p>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Certifications</div>
+            <ul>
+              <li>Good Pharmacovigilance Practices (GVP) – Udemy</li>
+              <li>Good Clinical Practice (GCP) – NIDA Clinical Trials Network</li>
+              <li>MedDRA Coding Basics</li>
+              <li>Basics of Clinical Data Management</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="two-column-list">
+              <span>English – Professional</span>
+              <span>Hindi – Native</span>
+              <span>Marathi – Native</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Interests</div>
+            <p class="tagline">
+              Pharmacovigilance · Clinical Data Management · Biostatistics &amp; Programming (SAS/R) ·
+              Medical Writing · Real-World Evidence · HEOR · Documentation &amp; Quality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Akash Landge · All information is true and correct to the best of my knowledge.</div>
+      <div class="footer-links">
+        <a href="mailto:landgeakash414@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/akash-landge-3b2ba21b8" target="_blank">LinkedIn</a>
+        <span>Pune, India</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Auto-set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
